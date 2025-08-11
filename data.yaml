@@ -1,0 +1,20 @@
+train: /content/drive/MyDrive/Tower/images/train
+val: /content/drive/MyDrive/Tower/images/val
+
+nc: 10  # number of component types (adjust accordingly)
+names: ['guy-ground',
+'guy-tensioner',
+'guy-tower',
+'insulator-conductor',
+'insulator-tower',
+'upper-insulator-tower',
+'upper-insulator-conductor',
+'opgw-wire',
+'opgw-tower',
+'opgw-assembly']  # adjust class names
+
+anchors:
+  - [12,9, 17,21, 51,62]  # P3/8
+  - [149,141, 219,265, 175,392] # P4/16
+  - [444,218, 327,394, 547,412] # P5/32
+ 

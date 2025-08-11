@@ -1,0 +1,44 @@
+# YOLOv5 hyperparameters (training + augmentation)
+
+# Optimizer settings
+lr0: 0.01              # Initial learning rate
+lrf: 0.01              # Final learning rate (as a fraction of lr0, used in cosine decay)
+momentum: 0.937        # Momentum for SGD optimizer
+weight_decay: 0.0005   # Weight decay (L2 regularization)
+
+# Warm-up strategy
+warmup_epochs: 3.0     # Number of warmup epochs (gradual learning rate increase)
+warmup_momentum: 0.8   # Starting momentum during warmup
+warmup_bias_lr: 0.1    # Initial learning rate for bias parameters during warmup
+
+# Loss function weights
+box: 0.05              # Box regression loss gain
+cls: 0.7               # Classification loss gain
+cls_pw: [1.4, 1.4, 1.0, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4]            # Class loss positive weight
+obj: 1.0               # Objectness loss gain
+obj_pw: 1.0            # Objectness loss positive weight
+iou_t: 0.20             # IoU training threshold
+anchor_t: 4.0          # Anchor-matching threshold
+fl_gamma: 0.0          # Focal Loss gamma (set >0 to enable Focal Loss)
+
+# Color and brightness augmentation (HSV)
+hsv_h: 0.02154           # Hue augmentation
+hsv_s: 0.3971             # Saturation augmentation
+hsv_v: 0.84834             # Value (brightness) augmentation
+
+# Geometric augmentations
+degrees: 10.258           # Image rotation (degrees)
+translate: 0.02338         # Image translation (as a fraction of width/height)
+scale: 0.37756             # Image scale (zoom in/out)
+shear: 8.2641             # Shear angle
+perspective: 0.00066675       # Perspective transformation
+
+# Flip augmentations
+flipud: 0.0            # Vertical flip probability
+fliplr: 0.35305            # Horizontal flip probability
+
+# Advanced augmentations
+mosaic: 0.033064            # Mosaic augmentation (4 images combined)
+mixup: 0.088308             # MixUp augmentation (image blending)
+copy_paste: 0.33284        # Copy-Paste augmentation (object pasting)
+
